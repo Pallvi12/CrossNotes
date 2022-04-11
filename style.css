@@ -1,0 +1,36 @@
+.btn-group {
+  display: inline-block;
+  margin-top: 3%;
+  max-width: 40px;
+}
+
+.sheet {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  touch-action: none;
+  border: 1px solid black;
+}
+
+#baseRow {
+  width: 100%;
+}
+.collection {
+  margin-top: 2.5%;
+}
+.row {
+  text-align: center;
+  float: left;
+  position: relative;
+  width: 40%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 2%;
+}
+
+.description {
+  margin-left: 10px;
+  width: 95%;
+  margin-top: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Cross Notes",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "node_modules/html2canvas/dist/html2canvas.js",
+    "Firebase/firebase-app.js",
+    "Firebase/firebase-firestore.js"
+  ],
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "unlimitedStorage",
+    "notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content.js",
+        "node_modules/html2canvas/dist/html2canvas.js",
+        "Firebase/firebase-app.js",
+        "Firebase/firebase-firestore.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "Firebase/firebase-app.js",
+      "Firebase/firebase-firestore.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}
